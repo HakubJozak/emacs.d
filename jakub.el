@@ -19,6 +19,7 @@
 (winner-mode)
 
 ; Keys
+(global-set-key (kbd "C-x f") 'find-file-in-git-repo)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-c [") 'winner-undo)
 (global-set-key (kbd "C-c ]") 'winner-redo)
@@ -75,6 +76,7 @@
   (after dired-after-updating-hook first () activate)
   "Sort dired listings with directories first before adding marks."
   (mydired-sort))
+
 
 
 
