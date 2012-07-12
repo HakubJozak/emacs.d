@@ -1,0 +1,535 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Jul  6 01:20:54 2012
+;; Desktop file format version 206
+;; Emacs version 23.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("save" "interac" "save" "a" "sa" "save" "winnder" "save" "winnder" "winmo" "revi" "window" "configu" "save" "winn" "confi"))
+(setq register-alist '((114 file . "/home/jakub/.emacs.d/starter-kit-registers.el") (98 file . "/home/jakub/.emacs.d/starter-kit-bindings.el") (105 file . "/home/jakub/.emacs.d/init.el")))
+(setq file-name-history '("~/.emacs.d/jakub/" "/usr/share/emacs/23.3/lisp/ses.el.gz" "/home/jakub/.emacs.d/jakub/ruby.el" "/home/jakub/prog/3scale/remonster/app/models/cms/file.rb" "/home/jakub/prog/3scale/remonster/app/models/cms/page.rb" "/home/jakub/prog/3scale/remonster/app/models/cms/builtin_page.rb" "/home/jakub/prog/3scale/remonster/app/models/cms/base_page.rb" "/home/jakub/prog/3scale/remonster/app/models/cms/builtin_page.rb" "/home/jakub/.rvm/gems/ree-1.8.7-2011.03/gems/rails-2.3.14" "/home/jakub/prog/3scale/remonster/app/models/cms/section.rb" "/sudo:localhost:/etc/hosts" "/etc/hosts" "/sudo:localhost:" "/etc/hosts" "/home/jakub/prog/3scale/remonster/config/database.yml" "~/.ido.last" "~/.emacs.d/session.10c6bdfdbb44ef11cc134106869485215300000018800045" "~/prog/projects/sph/play.rb" "~/prog/projects/sph/Gemfile" "~/prog/projects/sph/Gemfile.lock" "~/prog/projects/sph/mouse.rb" "~/prog/projects/sph/particle.png" "~/.emacs.d/session.1063df1103c30e7f4e134054208219373700000035440043" "~/prog/projects/sph/fluid-particles/fp_bounding_box.cpp" "~/prog/3scale/remonster/app/views/provider/admin/cms/templates/new.html.erb" "~/prog/3scale/remonster/app/controllers/provider/admin/cms/templates_controller.rb" "~/prog/3scale/remonster/app/views/provider/admin/cms/templates/edit.html.erb" "~/prog/3scale/remonster/app/views/provider/admin/cms/templates/_form.html.erb" "~/prog/3scale/remonster/app/views/cms/templates/edit.html.erb" "~/prog/3scale/remonster/app/views/provider/admin/cms/templates/index.html.erb"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/usr/share/emacs/23.3/lisp/winner.el.gz"
+  "winner.el.gz"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode hi-lock-mode)
+  1
+  '(15309 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/.emacs.d/jakub/irc.el"
+  "irc.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode hi-lock-mode)
+  1
+  '(788 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/23.3/lisp/ses.el.gz"
+  "ses.el.gz"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode)
+  1586
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  nil
+  "lisp"
+  'dired-mode
+  nil
+  9670
+  '(1568 nil)
+  t
+  '("/usr/share/emacs/23.3/lisp/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "*info*"
+  'Info-mode
+  nil
+  166766
+  '(163089 nil)
+  t
+  '("/usr/share/info/emacs-23/elisp" "Window Configurations")
+  '((tab-width . 8) (buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  nil
+  "23.3"
+  'dired-mode
+  nil
+  395
+  '(nil nil)
+  t
+  '("/usr/share/emacs/23.3/")
+  nil)
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/23.3/lisp/register.el.gz"
+  "register.el.gz"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode)
+  4269
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/23.3/lisp/play/morse.el.gz"
+  "morse.el.gz"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode)
+  2443
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  nil
+  "play"
+  'dired-mode
+  nil
+  2414
+  '(nil nil)
+  t
+  '("/usr/share/emacs/23.3/lisp/play/")
+  nil)
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/23.3/lisp/play/blackbox.el.gz"
+  "blackbox.el.gz"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  nil
+  "erc"
+  'dired-mode
+  nil
+  228
+  '(2869 nil)
+  t
+  '("/usr/share/emacs/23.3/lisp/erc/")
+  nil)
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/23.3/lisp/erc/erc-goodies.el.gz"
+  "erc-goodies.el.gz"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode hi-lock-mode text-scale-mode)
+  21228
+  '(19985 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/23.3/lisp/erc/erc-match.el.gz"
+  "erc-match.el.gz"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode)
+  19571
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/.emacs.d/jakub/ruby.el"
+  "ruby.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode)
+  803
+  '(663 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  nil
+  ".emacs.d"
+  'dired-mode
+  nil
+  219
+  '(1 nil)
+  t
+  '("/home/jakub/.emacs.d/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "jakub"
+  'dired-mode
+  nil
+  175
+  '(1 nil)
+  t
+  '("/home/jakub/.emacs.d/jakub/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/jakub/.emacs.d/custom.el"
+  "custom.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode hi-lock-mode)
+  19
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/.emacs.d/jakub.el"
+  "jakub.el"
+  'emacs-lisp-mode
+  '(auto-fill-mode eldoc-mode hi-lock-mode)
+  4030
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/3scale.github.com/_posts/2012-06-22-mining-gems-in-emacs.md"
+  "2012-06-22-mining-gems-in-emacs.md"
+  'markdown-mode
+  '(yas/minor-mode flyspell-mode)
+  2868
+  '(2676 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "jakub"
+  'dired-mode
+  nil
+  666
+  '(478 nil)
+  t
+  '("/home/jakub/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/jakub/.3scalerc"
+  ".3scalerc"
+  'fundamental-mode
+  nil
+  1
+  '(nil nil)
+  nil
+  nil
+  nil)
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/app/models/cms/section.rb"
+  "section.rb"
+  'ruby-mode
+  '(auto-fill-mode flymake-mode yas/minor-mode hi-lock-mode)
+  1538
+  '(1830 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/app/helpers/cms/menu_helper.rb"
+  "menu_helper.rb"
+  'ruby-mode
+  '(auto-fill-mode flymake-mode yas/minor-mode hi-lock-mode)
+  1183
+  '(785 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/app/models/cms/file.rb"
+  "file.rb"
+  'ruby-mode
+  '(auto-fill-mode flymake-mode yas/minor-mode hi-lock-mode)
+  1128
+  '(1201 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/app/models/cms/builtin_page.rb"
+  "builtin_page.rb"
+  'ruby-mode
+  '(auto-fill-mode flymake-mode yas/minor-mode hi-lock-mode)
+  355
+  '(310 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/app/models/cms/page.rb"
+  "page.rb"
+  'ruby-mode
+  '(auto-fill-mode flymake-mode yas/minor-mode hi-lock-mode)
+  423
+  '(378 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/app/models/cms/base_page.rb"
+  "base_page.rb"
+  'ruby-mode
+  '(auto-fill-mode flymake-mode yas/minor-mode hi-lock-mode)
+  294
+  '(294 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/app/views/layouts/_cms.html.erb"
+  "_cms.html.erb"
+  'html-mode
+  '(yas/minor-mode flyspell-mode)
+  474
+  '(1729 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "_posts"
+  'dired-mode
+  nil
+  323
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/3scale.github.com/_posts/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "3scale.github.com"
+  'dired-mode
+  nil
+  569
+  '(1 nil)
+  t
+  '("/home/jakub/prog/3scale/3scale.github.com/")
+  nil)
+
+(desktop-create-buffer 206
+  "/etc/hosts"
+  "hosts"
+  'conf-space-mode
+  nil
+  544
+  '(628 t)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "layouts"
+  'dired-mode
+  nil
+  465
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/views/layouts/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "admin"
+  'dired-mode
+  nil
+  253
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/views/provider/admin/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "cms"
+  'dired-mode
+  nil
+  511
+  '(447 nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/helpers/cms/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "helpers"
+  'dired-mode
+  nil
+  568
+  '(1 nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/helpers/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "provider"
+  'dired-mode
+  nil
+  200
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/helpers/provider/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "admin"
+  'dired-mode
+  nil
+  204
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/helpers/provider/admin/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "acms"
+  'dired-mode
+  nil
+  195
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/helpers/acms/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "admin"
+  'dired-mode
+  nil
+  197
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/helpers/admin/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "controllers"
+  'dired-mode
+  nil
+  352
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/controllers/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "provider"
+  'dired-mode
+  nil
+  247
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/views/provider/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "views"
+  'dired-mode
+  nil
+  1937
+  '(1 nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/views/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/config/database.yml"
+  "database.yml"
+  'yaml-mode
+  nil
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "app"
+  'dired-mode
+  nil
+  285
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "portlets"
+  'dired-mode
+  nil
+  241
+  '(nil nil)
+  t
+  '("/home/jakub/prog/3scale/remonster/app/portlets/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/jakub/prog/3scale/remonster/app/portlets/blog_posts_portlet.rb"
+  "blog_posts_portlet.rb"
+  'ruby-mode
+  '(auto-fill-mode flymake-mode yas/minor-mode hi-lock-mode)
+  97
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (column-number-mode . t)))
+
+(desktop-create-buffer 206
+  nil
+  "rails-2.3.14"
+  'dired-mode
+  nil
+  262
+  '(nil nil)
+  t
+  '("/home/jakub/.rvm/gems/ree-1.8.7-2011.03/gems/rails-2.3.14/")
+  nil)
+

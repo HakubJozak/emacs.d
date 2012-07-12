@@ -1,0 +1,47 @@
+
+;; ----- smex-history -----
+(
+ eval-buffer
+ find-file
+ find-grep
+ ffip
+ package-list-packages
+ smex
+ load-theme
+)
+
+;; ----- smex-data -----
+(
+ (eval-region . 1)
+ (package-install . 4)
+ (yas/minor-mode . 1)
+ (package-menu-mode . 1)
+ (package-list-packages . 9)
+ (enable-theme . 2)
+ (load-theme . 15)
+ (describe-theme . 1)
+ (rainbow-mode . 7)
+ (set-face-background . 1)
+ (eval-buffer . 10)
+ (read-color . 1)
+ (shrink-window . 5)
+ (eval-last-sexp . 1)
+ (pp-eval-last-sexp . 1)
+ (eval-print-last-sexp . 2)
+ (lisp-mode . 3)
+ (ido-copy-current-word . 1)
+ (kill-word . 4)
+ (fundamental-mode . 1)
+ (font-lock-mode . 1)
+ (edit-last-kbd-macro . 1)
+ (comment-region . 1)
+ (shell . 1)
+ (ansi-term . 2)
+ (term-line-mode . 1)
+ (smex . 2)
+ (magit-log-ranged . 1)
+ (anything . 1)
+ (ffip . 2)
+ (find-grep . 1)
+ (find-file . 1)
+)
