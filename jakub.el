@@ -51,16 +51,15 @@
       (require 'feature-mode)
       (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode)
       (setq feature-cucumber-command "bundle exec cucumber {options} {feature}")
-)))
+      )))
 
 
 ; Copy & Paste
 (setq mouse-drag-copy-region nil)  ; stops selection with a mouse being immediately injected to the kill ring
-(setq x-select-enable-primary nil)  ; stops killing/yanking interacting with primary X11 selection
 (setq x-select-enable-clipboard t)  ; makes killing/yanking interact with clipboard X11 selection
 (setq select-active-regions t) ;  active region sets primary X11 selection
 (global-set-key [mouse-2] 'mouse-yank-primary)  ; make mouse middle-click only paste from primary X11 selection, not clipboard and kill ring.
-(setq yank-pop-change-selection t)  ; makes rotating the kill ring change the X11 clipboard.
+; (setq yank-pop-change-selection t)  ; makes rotating the kill ring change the X11 clipboard.
 
 
 ; Fixing Dired

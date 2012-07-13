@@ -3,11 +3,11 @@
   (require 'erc-join)
   (erc-autojoin-mode 1)
 
+  (add-hook 'erc-join-hook 'irc-window-settings)
+
   (require 'tls)
   (erc :server "irc.freenode.net" :port 6667 :nick "HakubJozak" )
-;  (erc :server "irc.3scale.net" :port 61669 :nick "jakub" :password "hypnotoad")
-; irc.3scale.net
-  (erc-tls :server "ec2-184-72-192-26.compute-1.amazonaws.com" :port 61670 :nick "jakub" :password "hypnotoad")
+  (erc-tls :server "irc.3scale.net" :port 61670 :nick "jakub" :password "hypnotoad")
 
   (setq erc-autojoin-channels-alist
         '(("3scale.net" "#dev")
@@ -18,29 +18,13 @@
           ("3scale.net" "#deploy")
           ("3scale.net" "#mtg")
           ("freenode.net" "#gosu")
-          ("freenode.net" "#pry")
-          ("freenode.net" "#emacs")
-          ))
-  )
+          )))
 
-()
-
-; TODO: DRY
-(defun irc-connect-home ()
-  (interactive)
-  (require 'erc-join)
-  (erc-autojoin-mode 1)
-  (erc :server "irc.freenode.net" :port 6667 :nick "HakubJozak")
-  (setq erc-autojoin-channels-alist
-        '(("freenode.net" "#gosu")
-          ("freenode.net" "#pry")
-          ("freenode.net" "#emacs")
-          ))
-  )
 
 (defun irc-window-settings ()
   (interactive)
 
+  (delete-other-windows)
   (split-window-vertically)
   (set-window-buffer (selected-window) "#dev")
 
