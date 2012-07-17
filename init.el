@@ -8,12 +8,17 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit
+(defvar my-packages '(yasnippet
+                      multi-term
+                      find-file-in-git-repo
+                      starter-kit
                       starter-kit-lisp
                       starter-kit-ruby
-                      starter-kit-bindings
-                      yasnippet)
+                      starter-kit-bindings)
   "A list of packages to ensure are installed at launch.")
+
+(require 'find-file-in-git-repo)
+(require 'yasnippet)
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

@@ -24,6 +24,8 @@
 (global-set-key (kbd "C-c [") 'winner-undo)
 (global-set-key (kbd "C-c ]") 'winner-redo)
 (global-set-key (kbd "C-c g") 'vc-git-grep)
+(global-set-key (kbd "C-c C-c [") 'multi-term-prev)
+(global-set-key (kbd "C-c C-c ]") 'multi-term-next)
 
 (global-set-key [f10] (lambda () (interactive) (open-utility-file  "~/.emacs.d/jakub/snippets/text-mode/ruby-mode/")))
 (global-set-key [f11] (lambda () (interactive) (open-utility-file  "~/.emacs.d/jakub.el")))
@@ -75,7 +77,6 @@
   (after dired-after-updating-hook first () activate)
   "Sort dired listings with directories first before adding marks."
   (mydired-sort))
-
 
 
 
