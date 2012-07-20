@@ -10,6 +10,8 @@
 ;; Add in your own as you wish:
 (defvar my-packages '(yasnippet
                       multi-term
+                      feature-mode
+                      gist
                       find-file-in-git-repo
                       starter-kit
                       starter-kit-lisp

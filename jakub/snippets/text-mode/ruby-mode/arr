@@ -1,0 +1,6 @@
+#name : assert_raises(expected) do ... end
+#group : tests
+# --
+assert_raises(${Exception}) do
+  $0 
+end

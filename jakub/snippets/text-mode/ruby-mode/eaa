@@ -1,0 +1,6 @@
+#name : each do |...| ... end
+#group : collections
+# --
+each do |${o}|
+ $0
+end

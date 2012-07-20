@@ -1,0 +1,6 @@
+#name : When /^...$/
+#group : features
+# --
+When /^$1\$/ do
+  $0
+end

@@ -1,6 +1,6 @@
 ; Miscelaneous setq'
 (setq require-final-newline nil)
-(setq truncate-lines t)
+(setq truncate-lines nil)
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome")
 
@@ -38,6 +38,15 @@
   (local-set-key (kbd "C-c b") 'er/contract-region)))
 
 
+
+(defun jakub/set-compilation-text-scale ()
+  (text-scale-adjust -2)
+  (setq truncate-mode nil))
+
+(add-hook 'comint-mode-hook 'jakub/set-compilation-text-scale)
+
+
+
 ; YASnippets
 (require 'yasnippet)
 (yas/initialize)
@@ -45,15 +54,9 @@
 (setq yas/prompt-functions '(yas/ido-prompt yas/dropdown-prompt yas/no-prompt yas/x-prompt))
 
 
-; Cucumber.el
-(if (file-exists-p "~/.emacs.d/jakub/cucumber")
-    (let ()
-      (add-to-list 'load-path "~/.emacs.d/jakub/cucumber")
-      (yas/load-directory "~/.emacs.d/jakub/cucumber/snippets")
-      (require 'feature-mode)
-      (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode)
-      (setq feature-cucumber-command "bundle exec cucumber {options} {feature}")
-      )))
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+(setq feature-cucumber-command "bundle exec cucumber {options} {feature}")
 
 
 ; Copy & Paste
@@ -79,5 +82,12 @@
   (mydired-sort))
 
 
+
+(let ((class '((class color) (min-colors 89))))
+  (custom-theme-set-faces
+   'dichromacy
+   ;; Highlighting faces
+   `(highlight ((,class (:foreground unspecified :background "#e5e5e5")))))
+  )
 
 (server-start)
