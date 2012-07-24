@@ -12,6 +12,7 @@
                       multi-term
                       feature-mode
                       gist
+                      buffer-move
                       find-file-in-git-repo
                       starter-kit
                       starter-kit-lisp

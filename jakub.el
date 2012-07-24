@@ -16,7 +16,21 @@
 (setq ido-default-file-method "selected-window"
       ido-default-buffer-method "selected-window")
 
+; Windows & Buffers
+;
 (winner-mode)
+(require 'buffer-move)
+
+; http://stackoverflow.com/questions/1774832/how-to-swap-the-buffers-in-2-windows-emacs
+(defun window-swap () "Swap windows using buffer-move.el"
+  (interactive)
+  (if (null (windmove-find-other-window 'right))
+      (buf-move-left) (buf-move-right))
+  (other-window 1)
+  )
+
+(global-set-key (kbd "C-c s") 'window-swap)
+
 
 ; Keys
 (global-set-key (kbd "C-x f") 'find-file-in-git-repo)
@@ -32,6 +46,7 @@
 (global-set-key [f12] (lambda () (interactive) (open-utility-file  "~/.bashrc")))
 (global-set-key (kbd "C-c C-x C-f") 'sudo-edit)
 
+
 (add-hook 'coding-hook (lambda ()
   (local-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
   (local-set-key (kbd "C-c f") 'er/expand-region)
@@ -40,11 +55,10 @@
 
 
 (defun jakub/set-compilation-text-scale ()
-  (text-scale-adjust -2)
+  (text-scale-adjust -1)
   (setq truncate-mode nil))
 
 (add-hook 'comint-mode-hook 'jakub/set-compilation-text-scale)
-
 
 
 ; YASnippets
@@ -89,5 +103,8 @@
    ;; Highlighting faces
    `(highlight ((,class (:foreground unspecified :background "#e5e5e5")))))
   )
+
+(add-to-list 'auto-mode-alist '("\.scss$" . css-mode))
+
 
 (server-start)
