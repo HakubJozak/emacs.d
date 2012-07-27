@@ -20,12 +20,13 @@
                       starter-kit-bindings)
   "A list of packages to ensure are installed at launch.")
 
-(require 'find-file-in-git-repo)
-(require 'yasnippet)
-
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(require 'find-file-in-git-repo)
+(require 'yasnippet)
+
 
 (define-key global-map (kbd "C-c h") 'help-command)
 (define-key global-map "\C-h" 'backward-delete-char)
