@@ -112,12 +112,7 @@
     (setq yas/root-directory (list  "~/.emacs.d/jakub/snippets" yas/root-directory))
   )
 
-
-(add-to-list  7)
-
-(yas/root-directory)
 (setq yas/prompt-functions '(yas/ido-prompt yas/dropdown-prompt yas/no-prompt yas/x-prompt))
-
 
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 (setq feature-cucumber-command "bundle exec cucumber {options} {feature}")
