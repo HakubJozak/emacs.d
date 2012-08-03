@@ -11,14 +11,13 @@
 (require 'yasnippet)
 (require 'feature-mode)
 
-
-
 (when (not package-archive-contents)
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
 (defvar my-packages '(yasnippet
                       multi-term
+                      scss-mode
                       feature-mode
                       gist
                       buffer-move
@@ -49,6 +48,9 @@
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(add-hook 'sass-mode-hook 'delete-trailing-whitespace)
+(setq scss-compile-at-save nil)
+
 
 ; IDo
 (setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
@@ -65,10 +67,10 @@
   (interactive)
   (if (null (windmove-find-other-window 'right))
       (buf-move-left) (buf-move-right))
-  (other-window 1)
+  (ignore-errors (windmove-left))
   )
 
-(global-set-key (kbd "C-c s") 'window-swap)
+(global-set-key (kbd "C-c C-s") 'window-swap)
 
 
 ; Keys
@@ -103,6 +105,17 @@
 ; YASnippets
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/jakub/snippets")
+
+(if
+ (listp yas/root-directory)
+    (add-to-list 'yas/root-directory  "~/.emacs.d/jakub/snippets")
+    (setq yas/root-directory (list  "~/.emacs.d/jakub/snippets" yas/root-directory))
+  )
+
+
+(add-to-list  7)
+
+(yas/root-directory)
 (setq yas/prompt-functions '(yas/ido-prompt yas/dropdown-prompt yas/no-prompt yas/x-prompt))
 
 
@@ -131,6 +144,13 @@
   (after dired-after-updating-hook first () activate)
   "Sort dired listings with directories first before adding marks."
   (mydired-sort))
+
+(defun my-dired-setup ()
+  (interactive)
+  (local-set-key (kbd "C-j") 'browse-url-of-dired-file)
+  )
+
+(add-hook 'dired-mode-hook 'my-dired-setup)
 
 
 (server-start)
