@@ -37,8 +37,10 @@
 (define-key global-map (kbd "C-M-h") 'backward-kill-word)
 
 
-
 ; Miscelaneous setq'
+(setq tab-width 2)
+(setq sass-indent-offset 2)
+
 (setq require-final-newline nil)
 (setq truncate-lines nil)
 (setq browse-url-browser-function 'browse-url-generic
@@ -48,7 +50,7 @@
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(add-hook 'sass-mode-hook 'delete-trailing-whitespace)
+(add-hook 'scss-mode-hook 'delete-trailing-whitespace)
 (setq scss-compile-at-save nil)
 
 
