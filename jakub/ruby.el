@@ -8,12 +8,11 @@
       (message (trim-string (cadr result))))))
 
 
-(defun gh-url-of-file (start end)
+(defun github-url-of-file (start end)
   "Pushes Github URL of current file and line into a kill ring."
   (interactive "r")
   (let* (
-;         (branch (shell-command-to-string "git branch | sed -n -e 's/^\* \(.*\)/\1/p'"))
-         (branch "bcmsectomy")
+         (branch (magit-get-current-branch))
          (dir (find-git-repo (buffer-file-name)))
          (file (buffer-file-name))
          (url-root (concat "https://github.com/3scale/system/blob/" branch "/"))
