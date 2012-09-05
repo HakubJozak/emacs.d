@@ -24,6 +24,7 @@
                       find-file-in-git-repo
                       starter-kit
                       starter-kit-lisp
+                      starter-kit-js
                       starter-kit-ruby
                       starter-kit-bindings)
   "A list of packages to ensure are installed at launch.")
@@ -35,6 +36,8 @@
 (define-key global-map (kbd "C-c h") 'help-command)
 (define-key global-map "\C-h" 'backward-delete-char)
 (define-key global-map (kbd "C-M-h") 'backward-kill-word)
+
+
 
 
 ; Miscelaneous setq'
@@ -165,3 +168,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+;; (setq ffap-alist                   ; add something to `ffap-alist'
+;; 	 (cons
+;; 	  (cons "#dev"
+;; 		(defun ffap-erc (name)
+;;                   "BCMSECTOMY"))
+;; 	  ffap-alist))
