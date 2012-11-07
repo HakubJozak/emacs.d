@@ -87,11 +87,6 @@
 (global-set-key (kbd "C-c C-c [") 'multi-term-prev)
 (global-set-key (kbd "C-c C-c ]") 'multi-term-next)
 
-(global-set-key [f10] (lambda () (interactive) (open-utility-file  "~/.emacs.d/jakub/snippets/text-mode/ruby-mode/")))
-(global-set-key [f11] (lambda () (interactive) (open-utility-file  "~/.emacs.d/jakub.el")))
-(global-set-key [f12] (lambda () (interactive) (open-utility-file  "~/.bashrc")))
-(global-set-key (kbd "C-c C-x C-f") 'sudo-edit)
-
 
 (add-hook 'coding-hook (lambda ()
   (local-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
@@ -161,7 +156,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default))))
+ '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default)))
+ '(safe-local-variable-values (quote ((encoding . utf-8) (whitespace-line-column . 80) (lexical-binding . t)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -9,7 +9,6 @@
         '(
           ("3scale.net" "#dev")
           ("3scale.net" "#lmao")
-          ("3scale.net" "#dev-resistance")
           ("3scale.net" "#jenkins")
           ("3scale.net" "#github")
           ("3scale.net" "#deploy")
