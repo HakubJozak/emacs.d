@@ -103,7 +103,6 @@
 
 
 ; YASnippets
-(yas/initialize)
 (yas/load-directory "~/.emacs.d/jakub/snippets")
 
 (if

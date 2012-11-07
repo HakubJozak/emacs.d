@@ -20,6 +20,10 @@
     ))
 
 
+
+(setq magit-default-tracking-name-function 'magit-default-tracking-name-branch-only)
+
+
 (defun sm-try-smerge ()
    (save-excursion
      (goto-char (point-min))
