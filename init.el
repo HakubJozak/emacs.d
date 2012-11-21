@@ -171,3 +171,5 @@
 ;; 		(defun ffap-erc (name)
 ;;                   "BCMSECTOMY"))
 ;; 	  ffap-alist))
+
+; (define-key local-map (kbd "C-c C-n") (lambda () (interactive) (insert "ñ")))
