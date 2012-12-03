@@ -11,13 +11,12 @@
           ("3scale.net" "#lmao")
           ("3scale.net" "#jenkins")
           ("3scale.net" "#github")
-          ("3scale.net" "#deploy")
-          ("3scale.net" "#mtg")
 ;          ("freenode.net" "#gosu")
           ))
 
    (require 'tls)
   (erc-tls :server "irc.3scale.net" :port 61670 :nick "jakub" :password "hypnotoad")
+  (erc :server "localhost" :port 6667 :nick "jakub" :password "toor")
 ;  (erc :server "irc.freenode.net" :port 6667 :nick "HakubJozak" )
   )
 

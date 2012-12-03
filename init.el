@@ -103,15 +103,9 @@
 
 
 ; YASnippets
-(yas/load-directory "~/.emacs.d/jakub/snippets")
+(yas-global-mode 1)
+(setq yas-prompt-functions '(yas-dropdown-prompt yas-ido-prompt yas-no-prompt yas-x-prompt))
 
-(if
- (listp yas/root-directory)
-    (add-to-list 'yas/root-directory  "~/.emacs.d/jakub/snippets")
-    (setq yas/root-directory (list  "~/.emacs.d/jakub/snippets" yas/root-directory))
-  )
-
-(setq yas/prompt-functions '(yas/ido-prompt yas/dropdown-prompt yas/no-prompt yas/x-prompt))
 
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 (setq feature-cucumber-command "bundle exec cucumber {options} {feature}")
@@ -172,4 +166,40 @@
 ;;                   "BCMSECTOMY"))
 ;; 	  ffap-alist))
 
+
 ; (define-key local-map (kbd "C-c C-n") (lambda () (interactive) (insert "ñ")))
+
+
+;
+; Ibuffer - organized buffer list
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
+
+(setq ibuffer-saved-filter-groups
+      '(("work"
+	 ("emacs-config" (or (filename . ".emacs.d")
+			     (filename . "emacs-config")))
+	 ("Org" (or (mode . org-mode)
+		    (filename . "OrgMode")))
+	 ("system" (filename . "3scale/system/"))
+   ("backend" (filename . "3scale/backend/"))
+   ("november" (filename . "3scale/november/"))
+   ("october" (filename . "3scale/october/"))
+	 ("ssh" (or (name . "\*tramp.*")
+              (name . "/scpc")
+              ))
+
+   ("Magit" (name . "\*magit"))
+	 ("ERC" (mode . erc-mode))
+	 ("Help" (or (name . "\*Help\*")
+		     (name . "\*Apropos\*")
+		     (name . "\*info\*"))))))
+
+
+(add-hook 'ibuffer-mode-hook
+	  '(lambda ()
+	     (ibuffer-auto-mode 1)
+	     (ibuffer-switch-to-saved-filter-groups "work")))
+
+(setq ibuffer-expert t)
+(setq ibuffer-show-empty-filter-groups nil)
