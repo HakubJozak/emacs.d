@@ -1,41 +1,34 @@
 (require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
+(add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/")  t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade"."http://marmalade-repo.org/packages/") t)
 
 (package-initialize)
 
+
+(require 'auto-shell-command)
+(ascmd:remove-all)
+; (ascmd:add '("home.html.liquid" "curl -X PUT --data-urlencode 'template[draft]@/home/jakub/prog/3scale/system/lib/liquid/template/buyer_side/home.html.liquid' 'http://jakub-admin.3scale.net.dev:3000/admin/api/cms/templates/1929715.xml?provider_key=49a2fe3245e1ff5af2487c8acacea277'"))
 
 (require 'find-file-in-git-repo)
 (require 'yasnippet)
 (require 'buffer-move)
 (require 'yasnippet)
 (require 'feature-mode)
+(require 'erc)
+(require 'expand-region)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; Add in your own as you wish:
-(defvar my-packages '(yasnippet
-                      multi-term
-                      scss-mode
-                      feature-mode
-                      gist
-                      buffer-move
-                      find-file-in-git-repo
-                      starter-kit
-                      starter-kit-lisp
-                      starter-kit-js
-                      starter-kit-ruby
-                      starter-kit-bindings)
-  "A list of packages to ensure are installed at launch.")
-
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
 
 (define-key global-map (kbd "C-c h") 'help-command)
 (define-key global-map "\C-h" 'backward-delete-char)
 (define-key global-map (kbd "C-M-h") 'backward-kill-word)
+
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C--") 'er/contract-region)
 
 
 
@@ -150,7 +143,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default)))
- '(safe-local-variable-values (quote ((encoding . utf-8) (whitespace-line-column . 80) (lexical-binding . t)))))
+ '(safe-local-variable-values (quote ((encoding . utf-8) (whitespace-line-column . 80) (lexical-binding . t))))
+ '(wtf-custom-alist (quote (("TIL" . "today I learnt")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -194,6 +188,8 @@
 	 ("Help" (or (name . "\*Help\*")
 		     (name . "\*Apropos\*")
 		     (name . "\*info\*"))))))
+
+
 
 
 (add-hook 'ibuffer-mode-hook

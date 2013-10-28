@@ -15,11 +15,14 @@
           ))
 
    (require 'tls)
-  (erc-tls :server "irc.3scale.net" :port 61670 :nick "jakub" :password "hypnotoad")
+;  (erc-tls :server "irc.3scale.net" :port 61670 :nick "jakub"
+                                        ;  :password "hypnotoad")
+  (erc :server "irc.3scale.net" :port 6167 :nick "jakub" :password "hypnotoad")
   (erc :server "localhost" :port 6667 :nick "jakub" :password "toor")
 ;  (erc :server "irc.freenode.net" :port 6667 :nick "HakubJozak" )
   )
 
+(setq erc-track-exclude '("#jenkins" "#github"))
 
 
 (defun irc-window-settings ()
@@ -70,3 +73,9 @@
   (browse-url (concat "https://github.com/3scale/system/issues/" arg)))
 
 (eval-after-load "erc-button" '(add-to-list 'erc-button-alist '("#\\([0-9]+\\)" 0 t  3scale-browse-issue 1)))
+
+
+
+;; (require 'erc-image)
+;; (add-to-list 'erc-modules 'image)
+;; (erc-update-modules)
