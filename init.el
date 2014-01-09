@@ -1,15 +1,9 @@
 (require 'package)
-
 (add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/")  t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade"."http://marmalade-repo.org/packages/") t)
-
 (package-initialize)
 
-
-(require 'auto-shell-command)
-(ascmd:remove-all)
-; (ascmd:add '("home.html.liquid" "curl -X PUT --data-urlencode 'template[draft]@/home/jakub/prog/3scale/system/lib/liquid/template/buyer_side/home.html.liquid' 'http://jakub-admin.3scale.net.dev:3000/admin/api/cms/templates/1929715.xml?provider_key=49a2fe3245e1ff5af2487c8acacea277'"))
 
 (require 'find-file-in-git-repo)
 (require 'yasnippet)
@@ -18,6 +12,13 @@
 (require 'feature-mode)
 (require 'erc)
 (require 'expand-region)
+(require 'auto-shell-command)
+
+
+
+(ascmd:remove-all)
+; (ascmd:add '("home.html.liquid" "curl -X PUT --data-urlencode 'template[draft]@/home/jakub/prog/3scale/system/lib/liquid/template/buyer_side/home.html.liquid' 'http://jakub-admin.3scale.net.dev:3000/admin/api/cms/templates/1929715.xml?provider_key=49a2fe3245e1ff5af2487c8acacea277'"))
+
 
 (when (not package-archive-contents)
   (package-refresh-contents))
