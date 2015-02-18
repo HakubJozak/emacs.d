@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: thead
+# key: thead
+# binding: direct-keybinding
+# --
+<thead>
+  $0
+</thead>

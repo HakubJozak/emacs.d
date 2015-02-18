@@ -1,0 +1,4 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: alias
+# --
+$1: Ember.computed.alias('$1_en')

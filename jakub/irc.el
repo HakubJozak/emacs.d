@@ -5,25 +5,11 @@
 
   (setq erc-autojoin-channels-alist
         '(
-
-          ("irc.3scale.net" "#dev")
-          ("irc.3scale.net" "#lmao")
-          ("irc.3scale.net" "#jenkins")
-          ("irc.3scale.net" "#github")
-;          ("localhost" "#mt")
-;          ("localhost" "#home")
 ;          ("freenode.net" "#gosu")
+          ("freenode.net" "#emberjs")
           ))
 
-   (require 'tls)
-
-   (setq erc-track-exclude '("#jenkins" "#github" "#lua" "#nginx"))
-   (setq erc-keywords '("\\b3scale[^/A-z0-9]" "JakubHozak"))
-
-;  (erc-tls :server "irc.3scale.net" :port 61670 :nick "jakub" :password "hypnotoad")
-  (erc :server "localhost" :port 6667 :nick "jakub" :password "toor")
-  (erc :server "irc.3scale.net" :port 6667 :nick "jakub" :password "hypnotoad")
-;  (erc :server "irc.freenode.net" :port 6667 :nick "HakubJozak" )
+  (erc :server "irc.freenode.net" :port 6667 :nick "jakub" )
   )
 
 (setq erc-hide-list '("JOIN" "PART" "QUIT"))

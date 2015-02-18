@@ -4,15 +4,23 @@
 (add-to-list 'package-archives '("marmalade"."http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
+;; (switch-to-buffer (cadr ))
+;; (buffer-list)
+
+
+; (require 'org-trello)
+; (add-hook 'org-mode-hook 'org-trello-mode)
+
 
 (require 'find-file-in-git-repo)
 (require 'yasnippet)
 (require 'buffer-move)
-(require 'yasnippet)
 (require 'feature-mode)
 (require 'erc)
 (require 'expand-region)
 (require 'auto-shell-command)
+(require 'flymake-coffee)
+(require 'dired-open)
 
 
 
@@ -45,18 +53,29 @@
 
 
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(add-hook 'scss-mode-hook 'delete-trailing-whitespace)
+; TODO loop and do it after save
+(add-hook 'prog-mode-hook 'delete-trailing-whitespace)
+;; (add-hook 'ruby-mode-hook 'delete-trailing-whitespace)
+;; (add-hook 'scss-mode-hook 'delete-trailing-whitespace)
+;; (add-hook 'javascript-mode-hook 'delete-trailing-whitespace)
+;; (add-hook 'html-mode-hook 'delete-trailing-whitespace)
+;; (add-hook 'coffee-mode-hook 'delete-trailing-whitespace)
+
 (setq scss-compile-at-save nil)
+
+
+
 
 
 ; IDo
 (setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
+
 (defun ido-disable-line-trucation () (set (make-local-variable 'truncate-lines) nil))
 (add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-trucation)
 (setq ido-default-file-method "selected-window"
       ido-default-buffer-method "selected-window")
+
 
 ; Windows & Buffers
 (winner-mode)
@@ -87,6 +106,17 @@
   (local-set-key (kbd "C-c f") 'er/expand-region)
   (local-set-key (kbd "C-c b") 'er/contract-region)))
 
+(add-hook 'handlebars-mode-hook (lambda ()
+  (local-set-key (kbd "C-c c") 'sgml-close-tag)))
+
+
+
+
+; Coffee mode hook overrides this by default
+(add-hook 'coffee-mode-hook '(lambda ()
+                               (local-set-key (kbd "C-M-h") 'backward-kill-word)
+                               ))
+(add-hook 'coffee-mode-hook 'flymake-coffee-load)
 
 
 (defun jakub/set-compilation-text-scale ()
@@ -97,12 +127,27 @@
 
 
 ; YASnippets
+       (require 'dropdown-list)
+      (setq yas-prompt-functions '(yas-dropdown-prompt
+                                   yas-ido-prompt
+                                   yas-completing-prompt))
+
+
+;  "/home/jakub/prog/vendor/yasmate/snippets"
+;(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 (yas-global-mode 1)
-(setq yas-prompt-functions '(yas-dropdown-prompt yas-ido-prompt yas-no-prompt yas-x-prompt))
+
+;; TODO - snippets
+;; (add-hook 'handlebars-mode-hook lambda () (
+;;                                       (set (make-local-variable 'yas--extra-modes) '(html-mode))
+;;                                       ))
 
 
+
+(add-to-list 'auto-mode-alist '("\\.emblem$" . slim-mode))
+(add-to-list 'auto-mode-alist '("\.scss$" . css-mode))
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
-(setq feature-cucumber-command "bundle exec cucumber {options} {feature}")
+(setq feature-cucumber-command "be cu {options} {feature}")
 
 
 ; Copy & Paste
@@ -135,6 +180,8 @@
 (add-hook 'dired-mode-hook 'my-dired-setup)
 
 
+
+
 (server-start)
 
 
@@ -143,8 +190,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bongo-enabled-backends (quote (mpg123)))
  '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default)))
- '(safe-local-variable-values (quote ((encoding . utf-8) (whitespace-line-column . 80) (lexical-binding . t))))
+ '(safe-local-variable-values (quote ((require-final-newline) (encoding . utf-8) (whitespace-line-column . 80) (lexical-binding . t))))
  '(wtf-custom-alist (quote (("TIL" . "today I learnt")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -200,3 +248,8 @@
 
 (setq ibuffer-expert t)
 (setq ibuffer-show-empty-filter-groups nil)
+
+(define-key global-map (kbd "C-c C-SPC") 'bongo-pause/resume)
+(define-key global-map (kbd "C-<left>") 'bongo-seek-backward-10)
+(define-key global-map (kbd "C-<right>") 'bongo-seek-backward-10)
+(define-key global-map (kbd "C-<down>") 'bongo-pause/resume)

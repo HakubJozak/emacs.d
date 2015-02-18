@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: <
+# key: <
+# expand-env: ((yas-indent-line 'auto))
+# binding: C-c t
+# --
+<${1:div}>`yas-selected-text`$0</$1>

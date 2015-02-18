@@ -1,0 +1,4 @@
+#name : assert_not_nil
+#group : tests
+# --
+assert_not_nil $0

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: tr
+# --
+<tr>
+  $0
+</tr>

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bg
+# key: bg
+# binding: direct-keybinding
+# --
+background-color: #$0;

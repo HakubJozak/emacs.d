@@ -1,0 +1,5 @@
+#name: def $name ... enda
+# --
+def ${name}
+  $0
+end

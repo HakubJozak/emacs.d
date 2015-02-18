@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: {{
+# key: {{
+# --
+{{#${1:each} $2}}
+  $0
+{{/$1}}

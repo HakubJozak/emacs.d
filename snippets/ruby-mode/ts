@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ts
+# --
+t.string :${1:attr}_cs, :$1_en, :$1_fr, :$1_de, :$1_es, :$1_he
+$0
