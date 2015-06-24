@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: dropdown
+# key: dropdown
+# --
+.btn-group
+  button.btn.btn-success.dropdown-toggle data-toggle="dropdown"
+    ${1:label}
+    span.caret
+  ul.dropdown-menu
+    link-li
+      = link-to '${2:route}'
+$0

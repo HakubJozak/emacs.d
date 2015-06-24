@@ -21,6 +21,7 @@
   )
 
 (setq my-font "-unknown-DejaVu Sans Mono-normal-normal-normal-*-20-*-*-*-m-0-iso10646-1")
+(setq my-font "-unknown-DejaVu Sans Mono-normal-normal-normal-*-22-*-*-*-m-0-iso10646-1")
 
 (set-default-font my-font)
 (add-to-list 'default-frame-alist

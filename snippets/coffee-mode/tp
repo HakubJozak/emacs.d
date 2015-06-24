@@ -1,0 +1,4 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: tp
+# --
+${1:property}: Admin.translatedProperty('$1')$0

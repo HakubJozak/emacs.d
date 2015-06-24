@@ -15,12 +15,27 @@
 (require 'find-file-in-git-repo)
 (require 'yasnippet)
 (require 'buffer-move)
-(require 'feature-mode)
 (require 'erc)
 (require 'expand-region)
 (require 'auto-shell-command)
 (require 'flymake-coffee)
 (require 'dired-open)
+
+ (require 'dired-x)
+;    (setq-default dired-omit-files-p t) ; Buffer-local variable
+  (defun dired-dotfiles-toggle ()
+    "Show/hide dot-files"
+    (interactive)
+    (when (equal major-mode 'dired-mode)
+      (if (or (not (boundp 'dired-dotfiles-show-p)) dired-dotfiles-show-p) ; if currently showing
+	  (progn
+	    (set (make-local-variable 'dired-dotfiles-show-p) nil)
+	    (message "h")
+	    (dired-mark-files-regexp "^\\\.")
+	    (dired-do-kill-lines))
+	(progn (revert-buffer) ; otherwise just revert to re-show
+	       (set (make-local-variable 'dired-dotfiles-show-p) t)))))
+
 
 
 
@@ -56,7 +71,7 @@
 
 ; TODO loop and do it after save
 (add-hook 'prog-mode-hook 'delete-trailing-whitespace)
-;; (add-hook 'ruby-mode-hook 'delete-trailing-whitespace)
+(add-hook 'ruby-mode-hook 'delete-trailing-whitespace)
 ;; (add-hook 'scss-mode-hook 'delete-trailing-whitespace)
 ;; (add-hook 'javascript-mode-hook 'delete-trailing-whitespace)
 ;; (add-hook 'html-mode-hook 'delete-trailing-whitespace)
@@ -253,3 +268,6 @@
 (define-key global-map (kbd "C-<left>") 'bongo-seek-backward-10)
 (define-key global-map (kbd "C-<right>") 'bongo-seek-backward-10)
 (define-key global-map (kbd "C-<down>") 'bongo-pause/resume)
+
+(fset 'rails-schema-attribute
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([19 34 13 67108896 1 23 19 34 67108896 2 67108896 5 23 1] 0 "%d")) arg)))
