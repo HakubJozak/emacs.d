@@ -1,4 +1,5 @@
 (setq magit-set-upstream-on-push 'dontask)
+(setq magit-push-always-verify 'PP)
 
 (defun stash-and-checkout ()
   (interactive)
