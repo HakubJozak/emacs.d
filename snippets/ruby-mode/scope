@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: scope
+# key: scope
+# --
+scope ${1:name}, lambda { $0 }

@@ -1,4 +1,4 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: alias
+# name: at
 # --
-$1: Ember.computed.alias('$2')$0
+${1:property}: DS.attr '${2:string}'$0

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: att
+# expand-env: ((yas-indent-line 'fixed))
+# --
+  ${1:property}En: DS.attr '${2:string}'
+  $1Cs: DS.attr '$2'$0

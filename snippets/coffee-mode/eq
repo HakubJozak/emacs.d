@@ -1,4 +1,5 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: alias
+# name: eq
+# key: eq
 # --
-$1: Ember.computed.alias('$2')$0
+Ember.computed.equal('$1','$2')$0

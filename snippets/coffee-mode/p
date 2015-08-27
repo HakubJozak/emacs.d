@@ -1,4 +1,5 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: alias
+# name: p
+# key: p
 # --
-$1: Ember.computed.alias('$2')$0
+(->$0).property($1)
